@@ -35,10 +35,10 @@ function drawLineV(x,y1,y2){
   line(x,y1,x,y2);
 }
 
-function drawLineH(y,x1,x2){
+function drawLineH(y,x1,dx,i){
   stroke(104, 170, 247,192);
   strokeWeight(8);
-  line(x1,y,x2,y);
+  line(x1+i*dx,y,x1+(i+1)*dx,y);
 }
 
 function drawNode(x,y,r){
@@ -58,6 +58,12 @@ function draw() {
   //vLines
   for(let i=0;i<vLines;i++){
         drawLineV(piasX+baseX1+i*dx,baseY1,baseY2);
+    
+        //hLines
+        if(i===vLines-1)continue;
+        for(let j=0;j<nodes;j++){
+          drawLineH(piasY + baseY1 + j*dy,piasX+baseX1,dx,i);
+        }
     
   }
   
