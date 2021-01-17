@@ -1,3 +1,12 @@
+// for scroll smooth
+var anchor = document.querySelector('a[href="#start"]')
+var target = document.getElementById('start')
+anchor.addEventListener('click', function (e) {
+  if (window.scrollTo) {
+    e.preventDefault()
+    window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop})
+  }
+})
 //====DEF const==========
 //
 const vLines = 5;
@@ -192,14 +201,26 @@ function dLadder(){
 //
 
 function setup() {
-    createCanvas(cvX, cvY);
+    let canvas=createCanvas(cvX, cvY);
     //決定分支，最後一條不用決定向右分支
     for(let i=0;i<vLines-1;i++){
          arr = genBranchArray(arr,i);
     }
+  canvas.parent('sketch-holder');
 }
-
+function resize_canvas(){
+ 
+    let ctx=$('.p5Canvas').eq(0).removeAttr("style");
+		// ctx.beginPath();
+		// ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+		// ctx.stroke();
+}
 function draw() {
     background(50);
     dLadder();
+    resize_canvas();
 }
+
+//-----------
+
+  
