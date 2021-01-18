@@ -1,16 +1,29 @@
-html{
-  background-color: #323232;
-  croll-behavior: smooth;
-  
+html {
+    background-color: #323232;
+    croll-behavior: smooth;
 }
+
 .container-fluid {
-  background-color: #323232;
+    background-color: #323232;
 }
-p,h1,title,div{ /*font white*/
-  color: white;
+
+p,
+h1,
+title,
+div {
+    /*font white*/
+    color: white;
 }
-#sketch-holder,canvas {
- 
- max-width: 100%;
- height:auto;
+
+#sketch-holder,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+select option {
+    /* margin: 40px; */
+    background: #323232;
+    /* color: #fff; */
+    /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
 }
