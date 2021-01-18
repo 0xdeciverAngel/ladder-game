@@ -220,3 +220,17 @@ function draw() {
 }
 
 //-----------
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        selected: '',
+        nums: [
+            { v_num: 2 },
+            { v_num: 3 },
+            { v_num: 4 },
+            { v_num: 5 },
+
+        ]
+    }
+})

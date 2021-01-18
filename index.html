@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container-fluid content">
+    <div class="container-fluid content " id="app">
         <div class="row justify-content-center">
             <!--        <div class="col col-sm-4"> -->
 
@@ -32,13 +32,15 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text bg-transparent text-white" for="inputGroupSelect01">選項數量</label>
                         </div>
-                        <select class="custom-select bg-transparent text-white" id="inputGroupSelect01">
+                        <select class="custom-select bg-transparent text-white" id="inputGroupSelect01" v-model="selected">
                             <option selected>Choose..</option>
-                            <option value="2" class="text-white ">2</option>
-                            <option value="3" class="text-white ">3</option>
-                            <option value="4" class="text-white ">4</option>
-                            <option value="5" class="text-white ">5</option>
-
+                        <option
+                            v-for="num in nums"
+                            v-bind:value="{ v_vum: num.v_num}"
+                        >
+                            {{ num.v_num }}
+                        </option>
+                        </select>
                         </select>
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary text-white" type="button">Button</button>
@@ -67,6 +69,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!--   custom   js  -->
     <script src="pyLadder.js"></script>
     <link rel="stylesheet" href="style.css">
