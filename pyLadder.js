@@ -9,8 +9,8 @@ anchor.addEventListener('click', function(e) {
     })
     //====DEF const==========
     //
-const vLines = 5;
-const nodes = 4;
+var vLines = 5;
+var nodes = 4;
 
 const cvX = 800;
 const cvY = 500;
