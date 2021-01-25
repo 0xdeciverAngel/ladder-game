@@ -9,6 +9,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>爬梯子電腦版 line 爬梯子 電腦版 抽籤</title>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!--    p5 js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
@@ -27,25 +41,25 @@
                         <a class="btn btn-primary btn-lg" href="#start" role="button">馬上試用</a>
                     </div>
                 </div>
+                
                 <div class="container-fluid justify-content-center text-center " id="start">
                     <div class="input-group mb-3 ">
                         <div class="input-group-prepend">
                             <label class="input-group-text bg-transparent text-white" for="inputGroupSelect01">選項數量</label>
                         </div>
+                        
                         <select class="custom-select bg-transparent text-white" id="inputGroupSelect01" v-model="selected">
                             <option selected>Choose..</option>
-                        <option
-                            v-for="num in nums"
-                            v-bind:value="{ v_vum: num.v_num}"
-                        >
-                            {{ num.v_num }}
-                        </option>
+                            <option v-for="num in nums" v-bind:value="{ v_vum: num.v_num}">
+                                {{ num.v_num }}
+                            </option>
                         </select>
-                        </select>
+
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary text-white" type="button">Button</button>
                         </div>
                     </div>
+
                     <div id="sketch-holder">
                         <!-- Our sketch will go here! -->
                     </div>
@@ -59,18 +73,7 @@
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-    <!--    p5 js  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
-    <!-- vue js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
     <!--   custom   js  -->
     <script src="pyLadder.js"></script>
     <link rel="stylesheet" href="style.css">
