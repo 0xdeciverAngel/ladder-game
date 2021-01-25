@@ -21,8 +21,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
-    <!-- vue js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
@@ -41,24 +39,9 @@
                         <a class="btn btn-primary btn-lg" href="#start" role="button">馬上試用</a>
                     </div>
                 </div>
-                
-                <div class="container-fluid justify-content-center text-center " id="start">
-                    <div class="input-group mb-3 ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text bg-transparent text-white" for="inputGroupSelect01">選項數量</label>
-                        </div>
-                        
-                        <select class="custom-select bg-transparent text-white" id="inputGroupSelect01" v-model="selected">
-                            <option selected>Choose..</option>
-                            <option v-for="num in nums" v-bind:value="{ v_vum: num.v_num}">
-                                {{ num.v_num }}
-                            </option>
-                        </select>
 
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary text-white" type="button">Button</button>
-                        </div>
-                    </div>
+                <div class="container-fluid justify-content-center text-center " id="start">
+
 
                     <div id="sketch-holder">
                         <!-- Our sketch will go here! -->
@@ -73,7 +56,7 @@
 
 
 
-    
+
     <!--   custom   js  -->
     <script src="pyLadder.js"></script>
     <link rel="stylesheet" href="style.css">
