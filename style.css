@@ -31,3 +31,14 @@ select option {
 ul {
     font-size: 13px;
 }
+
+input[type="text"] {
+    background: transparent;
+    /* border: none; */
+}
+
+span.input-group-text {
+    background: transparent;
+    /* border: none; */
+    color: white;
+}
